@@ -21,9 +21,8 @@ export default function index() {
   })
 
   useEffect(() => {
-    const getInitialPatient = JSON.parse(
-      localStorage.getItem('patient') as string,
-    )
+    const getInitialPatient =
+      JSON.parse(localStorage.getItem('patient') as string) || []
 
     setPatients(getInitialPatient)
   }, [])
